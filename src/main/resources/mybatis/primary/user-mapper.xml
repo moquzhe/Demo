@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mo.user.mapper.primary.PrimaryUserMapper">
+	<!-- <resultMap type="BaseResultMap" id="org.mo.user.bean.User">
+		<id column="id" property="id" jdbcType="int"/>
+		<result column="name" property="name" jdbcType="VARCHAR"/>
+		<result column="sex" property="sex" jdbcType="int"/>
+	</resultMap>
+ -->
+	<select id="findByName" resultType="org.mo.user.bean.User" parameterType="java.lang.String">
+		select * from user where name = #{name}
+	</select>
+</mapper>
